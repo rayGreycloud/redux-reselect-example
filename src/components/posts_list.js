@@ -11,7 +11,7 @@ class PostsList extends Component {
   renderPost(post) {
     return (
       <li>
-        <input type="checkbox" onChange={e => console.log(e.target.checked)} />
+        <input type="checkbox" className="list-group-item" onChange={e => console.log(e.target.checked)} />
         {post.title}
       </li>
     );
@@ -21,7 +21,7 @@ class PostsList extends Component {
     console.log(this.props.selectedPosts)
 
     return (
-      <ul>
+      <ul className="list-group posts-list">
         {_.map(this.props.posts, this.renderPost.bind(this))}
       </ul>
     );
